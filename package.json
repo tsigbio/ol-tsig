@@ -1,0 +1,22 @@
+{
+  "name": "ol-tsig",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Javier Sanchez",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsig-idr/ol-tsig.git"
+  },
+  "keywords": [
+    "openlayers"
+  ],
+  "bugs": {
+    "url": "https://github.com/tsig-idr/ol-tsig/issues"
+  },
+  "homepage": "https://github.com/tsig-idr/ol-tsig#readme",
+  "description": ""
+}
