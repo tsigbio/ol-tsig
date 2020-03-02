@@ -1,11 +1,14 @@
 {
   "name": "ol-tsig",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build --public-url . index.html"
   },
-  "author": "Javier Sanchez",
+  "author": "Javier Sánchez García",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -18,5 +21,17 @@
     "url": "https://github.com/tsig-idr/ol-tsig/issues"
   },
   "homepage": "https://github.com/tsig-idr/ol-tsig#readme",
-  "description": ""
+  "dependencies": {
+    "ol": "^6.1.1",
+    "ol-ext": "^3.1.8"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "parcel-bundler": "^1.12.4"
+  }
 }
