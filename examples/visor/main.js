@@ -4,7 +4,7 @@ import './css/main.css';
 
 import mapa from './json/capas.js';
 import OlExtControlLayerSwitcher from './external_Modules/layerSwitcher/LayerSwitcher';
-import OlTsMap from '../../src/ol_ts/map/OlTsMap';
+import OlTsMap from '../../src/ol_tsig/map/OlTsMap';
 
 export default () => {
     mapa.target = 'map';

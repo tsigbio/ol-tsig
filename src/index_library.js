@@ -2,9 +2,9 @@
  */
 /* global ol */
 
-import * as olTslayer from './ol_ts/layer';
-import * as olTsMap from './ol_ts/map';
-import * as olTsUtils from './ol_ts/utils';
+import * as olTslayer from './ol_tsig/layer';
+import * as olTsMap from './ol_tsig/map';
+import * as olTsUtils from './ol_tsig/utils';
 
 if (window.ol && !ol.ts) {
     ol.ts = {
