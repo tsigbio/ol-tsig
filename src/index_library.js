@@ -1,13 +1,13 @@
-/** @namespace  ol.ts
+/** @namespace  ol.tsig
  */
 /* global ol */
 
-import * as olTslayer from './ol_tsig/layer';
-import * as olTsMap from './ol_tsig/map';
-import * as olTsUtils from './ol_tsig/utils';
+import * as olTslayer from './ol-tsig/layer';
+import * as olTsMap from './ol-tsig/map';
+import * as olTsUtils from './ol-tsig/utils';
 
-if (window.ol && !ol.ts) {
-    ol.ts = {
+if (window.ol && !ol.tsig) {
+    ol.tsig = {
         layer: olTslayer,
         map: olTsMap,
         utils: olTsUtils

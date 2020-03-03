@@ -1,6 +1,6 @@
 
 /**
- * @module ol_tsig/utils
+ * @module ol-tsig/utils
  */
 
 export { OlTsError } from './utils/OlTsError';

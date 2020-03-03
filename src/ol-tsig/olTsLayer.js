@@ -1,6 +1,6 @@
 
 /**
- * @module ol_tsig/layer
+ * @module ol-tsig/layer
  */
 
 export { default as OlTsLayerGroup } from './layer/OlTsLayerGroup';
