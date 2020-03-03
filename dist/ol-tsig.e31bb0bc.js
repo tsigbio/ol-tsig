@@ -27268,7 +27268,7 @@ function (_super) {
 
 var _default = LayerGroup;
 exports.default = _default;
-},{"../util.js":"node_modules/ol/util.js","../Collection.js":"node_modules/ol/Collection.js","../CollectionEventType.js":"node_modules/ol/CollectionEventType.js","../Object.js":"node_modules/ol/Object.js","../ObjectEventType.js":"node_modules/ol/ObjectEventType.js","../asserts.js":"node_modules/ol/asserts.js","../events.js":"node_modules/ol/events.js","../events/EventType.js":"node_modules/ol/events/EventType.js","../extent.js":"node_modules/ol/extent.js","./Base.js":"node_modules/ol/layer/Base.js","../obj.js":"node_modules/ol/obj.js","../source/State.js":"node_modules/ol/source/State.js"}],"src/ol_ts/utils/OlTsError.js":[function(require,module,exports) {
+},{"../util.js":"node_modules/ol/util.js","../Collection.js":"node_modules/ol/Collection.js","../CollectionEventType.js":"node_modules/ol/CollectionEventType.js","../Object.js":"node_modules/ol/Object.js","../ObjectEventType.js":"node_modules/ol/ObjectEventType.js","../asserts.js":"node_modules/ol/asserts.js","../events.js":"node_modules/ol/events.js","../events/EventType.js":"node_modules/ol/events/EventType.js","../extent.js":"node_modules/ol/extent.js","./Base.js":"node_modules/ol/layer/Base.js","../obj.js":"node_modules/ol/obj.js","../source/State.js":"node_modules/ol/source/State.js"}],"src/utils/OlTsError.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -27330,7 +27330,7 @@ function (_Error) {
 
 var _default = OlTsError;
 exports.default = _default;
-},{}],"src/ol_ts/utils/olTsJson2Style.js":[function(require,module,exports) {
+},{}],"src/utils/olTsJson2Style.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -67269,7 +67269,7 @@ var _XYZ = _interopRequireDefault(require("./source/XYZ.js"));
 var _Zoomify = _interopRequireDefault(require("./source/Zoomify.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./source/BingMaps.js":"node_modules/ol/source/BingMaps.js","./source/CartoDB.js":"node_modules/ol/source/CartoDB.js","./source/Cluster.js":"node_modules/ol/source/Cluster.js","./source/IIIF.js":"node_modules/ol/source/IIIF.js","./source/Image.js":"node_modules/ol/source/Image.js","./source/ImageArcGISRest.js":"node_modules/ol/source/ImageArcGISRest.js","./source/ImageCanvas.js":"node_modules/ol/source/ImageCanvas.js","./source/ImageMapGuide.js":"node_modules/ol/source/ImageMapGuide.js","./source/ImageStatic.js":"node_modules/ol/source/ImageStatic.js","./source/ImageWMS.js":"node_modules/ol/source/ImageWMS.js","./source/OSM.js":"node_modules/ol/source/OSM.js","./source/Raster.js":"node_modules/ol/source/Raster.js","./source/Source.js":"node_modules/ol/source/Source.js","./source/Stamen.js":"node_modules/ol/source/Stamen.js","./source/Tile.js":"node_modules/ol/source/Tile.js","./source/TileArcGISRest.js":"node_modules/ol/source/TileArcGISRest.js","./source/TileDebug.js":"node_modules/ol/source/TileDebug.js","./source/TileImage.js":"node_modules/ol/source/TileImage.js","./source/TileJSON.js":"node_modules/ol/source/TileJSON.js","./source/TileWMS.js":"node_modules/ol/source/TileWMS.js","./source/UrlTile.js":"node_modules/ol/source/UrlTile.js","./source/UTFGrid.js":"node_modules/ol/source/UTFGrid.js","./source/Vector.js":"node_modules/ol/source/Vector.js","./source/VectorTile.js":"node_modules/ol/source/VectorTile.js","./source/WMTS.js":"node_modules/ol/source/WMTS.js","./source/XYZ.js":"node_modules/ol/source/XYZ.js","./source/Zoomify.js":"node_modules/ol/source/Zoomify.js"}],"src/ol_ts/utils/olTsJson2Source.js":[function(require,module,exports) {
+},{"./source/BingMaps.js":"node_modules/ol/source/BingMaps.js","./source/CartoDB.js":"node_modules/ol/source/CartoDB.js","./source/Cluster.js":"node_modules/ol/source/Cluster.js","./source/IIIF.js":"node_modules/ol/source/IIIF.js","./source/Image.js":"node_modules/ol/source/Image.js","./source/ImageArcGISRest.js":"node_modules/ol/source/ImageArcGISRest.js","./source/ImageCanvas.js":"node_modules/ol/source/ImageCanvas.js","./source/ImageMapGuide.js":"node_modules/ol/source/ImageMapGuide.js","./source/ImageStatic.js":"node_modules/ol/source/ImageStatic.js","./source/ImageWMS.js":"node_modules/ol/source/ImageWMS.js","./source/OSM.js":"node_modules/ol/source/OSM.js","./source/Raster.js":"node_modules/ol/source/Raster.js","./source/Source.js":"node_modules/ol/source/Source.js","./source/Stamen.js":"node_modules/ol/source/Stamen.js","./source/Tile.js":"node_modules/ol/source/Tile.js","./source/TileArcGISRest.js":"node_modules/ol/source/TileArcGISRest.js","./source/TileDebug.js":"node_modules/ol/source/TileDebug.js","./source/TileImage.js":"node_modules/ol/source/TileImage.js","./source/TileJSON.js":"node_modules/ol/source/TileJSON.js","./source/TileWMS.js":"node_modules/ol/source/TileWMS.js","./source/UrlTile.js":"node_modules/ol/source/UrlTile.js","./source/UTFGrid.js":"node_modules/ol/source/UTFGrid.js","./source/Vector.js":"node_modules/ol/source/Vector.js","./source/VectorTile.js":"node_modules/ol/source/VectorTile.js","./source/WMTS.js":"node_modules/ol/source/WMTS.js","./source/XYZ.js":"node_modules/ol/source/XYZ.js","./source/Zoomify.js":"node_modules/ol/source/Zoomify.js"}],"src/utils/olTsJson2Source.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -67918,7 +67918,7 @@ var _VectorImage = _interopRequireDefault(require("./layer/VectorImage.js"));
 var _VectorTile = _interopRequireDefault(require("./layer/VectorTile.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./layer/Group.js":"node_modules/ol/layer/Group.js","./layer/Heatmap.js":"node_modules/ol/layer/Heatmap.js","./layer/Image.js":"node_modules/ol/layer/Image.js","./layer/Layer.js":"node_modules/ol/layer/Layer.js","./layer/Tile.js":"node_modules/ol/layer/Tile.js","./layer/Vector.js":"node_modules/ol/layer/Vector.js","./layer/VectorImage.js":"node_modules/ol/layer/VectorImage.js","./layer/VectorTile.js":"node_modules/ol/layer/VectorTile.js"}],"src/ol_ts/utils/olTsJson2Layer.js":[function(require,module,exports) {
+},{"./layer/Group.js":"node_modules/ol/layer/Group.js","./layer/Heatmap.js":"node_modules/ol/layer/Heatmap.js","./layer/Image.js":"node_modules/ol/layer/Image.js","./layer/Layer.js":"node_modules/ol/layer/Layer.js","./layer/Tile.js":"node_modules/ol/layer/Tile.js","./layer/Vector.js":"node_modules/ol/layer/Vector.js","./layer/VectorImage.js":"node_modules/ol/layer/VectorImage.js","./layer/VectorTile.js":"node_modules/ol/layer/VectorTile.js"}],"src/utils/olTsJson2Layer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -67928,9 +67928,9 @@ exports.olTsUtilsJSON2Layer = void 0;
 
 var olLayers = _interopRequireWildcard(require("ol/layer"));
 
-var olTsLayers = _interopRequireWildcard(require("../olTsLayer"));
+var olTsLayers = _interopRequireWildcard(require("../layer"));
 
-var _olTsUtils = require("../olTsUtils");
+var _utils = require("../utils");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
@@ -67952,13 +67952,13 @@ function json2Layer(layer) {
   var ly = JSON.parse(JSON.stringify(layer));
 
   if (ly.sources) {
-    ly.source = _olTsUtils.olTsUtilsJSON2Source.json2sources(ly);
+    ly.source = _utils.olTsUtilsJSON2Source.json2sources(ly);
   } else if (ly.source) {
-    ly.source = _olTsUtils.olTsUtilsJSON2Source.json2source(ly.source);
+    ly.source = _utils.olTsUtilsJSON2Source.json2source(ly.source);
   }
 
   if (ly.style) {
-    ly.style = _olTsUtils.olTsUtilsJSON2Style.json2Style(ly.style);
+    ly.style = _utils.olTsUtilsJSON2Style.json2Style(ly.style);
   }
 
   var l = new (layersClass()[ly.type])(ly);
@@ -67984,7 +67984,7 @@ var olTsUtilsJSON2Layer = {
 }; // ------------------------------------------------------------------
 
 exports.olTsUtilsJSON2Layer = olTsUtilsJSON2Layer;
-},{"ol/layer":"node_modules/ol/layer.js","../olTsLayer":"src/ol_ts/olTsLayer.js","../olTsUtils":"src/ol_ts/olTsUtils.js"}],"src/ol_ts/olTsUtils.js":[function(require,module,exports) {
+},{"ol/layer":"node_modules/ol/layer.js","../layer":"src/layer.js","../utils":"src/utils.js"}],"src/utils.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -68022,7 +68022,7 @@ var _olTsJson2Style = require("./utils/olTsJson2Style");
 var _olTsJson2Source = require("./utils/olTsJson2Source");
 
 var _olTsJson2Layer = require("./utils/olTsJson2Layer");
-},{"./utils/OlTsError":"src/ol_ts/utils/OlTsError.js","./utils/olTsJson2Style":"src/ol_ts/utils/olTsJson2Style.js","./utils/olTsJson2Source":"src/ol_ts/utils/olTsJson2Source.js","./utils/olTsJson2Layer":"src/ol_ts/utils/olTsJson2Layer.js"}],"src/ol_ts/layer/OlTsLayerGroup.js":[function(require,module,exports) {
+},{"./utils/OlTsError":"src/utils/OlTsError.js","./utils/olTsJson2Style":"src/utils/olTsJson2Style.js","./utils/olTsJson2Source":"src/utils/olTsJson2Source.js","./utils/olTsJson2Layer":"src/utils/olTsJson2Layer.js"}],"src/layer/OlTsLayerGroup.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -68032,7 +68032,7 @@ exports.default = void 0;
 
 var _Group = _interopRequireDefault(require("ol/layer/Group"));
 
-var _olTsUtils = require("../olTsUtils");
+var _utils = require("../utils");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68070,7 +68070,7 @@ function (_OlLayerGroup) {
     var baseOptions = _objectSpread({}, options);
 
     delete baseOptions.layers;
-    baseOptions.layers = new _olTsUtils.OlTsUtilsJSON2Layers().json2Layers(options.layers);
+    baseOptions.layers = new _utils.OlTsUtilsJSON2Layers().json2Layers(options.layers);
     return _possibleConstructorReturn(this, _getPrototypeOf(OlTsLayerGroup).call(this, baseOptions));
   }
 
@@ -68079,7 +68079,7 @@ function (_OlLayerGroup) {
 
 var _default = OlTsLayerGroup;
 exports.default = _default;
-},{"ol/layer/Group":"node_modules/ol/layer/Group.js","../olTsUtils":"src/ol_ts/olTsUtils.js"}],"src/ol_ts/layer/OlTsLayerScale.js":[function(require,module,exports) {
+},{"ol/layer/Group":"node_modules/ol/layer/Group.js","../utils":"src/utils.js"}],"src/layer/OlTsLayerScale.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -68089,7 +68089,7 @@ exports.default = void 0;
 
 var _Group = _interopRequireDefault(require("ol/layer/Group"));
 
-var _olTsUtils = require("../olTsUtils");
+var _utils = require("../utils");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68129,12 +68129,12 @@ function (_OlLayerGroup) {
     var baseOptions = _objectSpread({}, options);
 
     delete baseOptions.layers;
-    baseOptions.layers = _olTsUtils.olTsUtilsJSON2Layer.json2Layers(options.layers);
+    baseOptions.layers = _utils.olTsUtilsJSON2Layer.json2Layers(options.layers);
 
     if (scaleLayerOK(baseOptions.layers)) {
       _this = _possibleConstructorReturn(this, _getPrototypeOf(OlTsLayerScale).call(this, baseOptions));
     } else {
-      throw new _olTsUtils.OlTsError(100);
+      throw new _utils.OlTsError(100);
     }
 
     return _possibleConstructorReturn(_this);
@@ -68171,7 +68171,7 @@ function scaleLayerOK(lyrs) {
 var _default = OlTsLayerScale; // ==================================================
 
 exports.default = _default;
-},{"ol/layer/Group":"node_modules/ol/layer/Group.js","../olTsUtils":"src/ol_ts/olTsUtils.js"}],"src/ol_ts/layer/OlTsLayerVector.js":[function(require,module,exports) {
+},{"ol/layer/Group":"node_modules/ol/layer/Group.js","../utils":"src/utils.js"}],"src/layer/OlTsLayerVector.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -68183,7 +68183,7 @@ var _Vector = _interopRequireDefault(require("ol/layer/Vector"));
 
 var _GeoJSON = _interopRequireDefault(require("ol/format/GeoJSON"));
 
-var _olTsUtils = require("../olTsUtils");
+var _utils = require("../utils");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68218,7 +68218,7 @@ function (_OlLayerVector) {
     var options = optOptions || {};
 
     if (!options.source) {
-      options.source = _olTsUtils.olTsUtilsJSON2Source.json2source({
+      options.source = _utils.olTsUtilsJSON2Source.json2source({
         type: 'Vector'
       });
     }
@@ -68362,7 +68362,7 @@ var etiquetaCluster = {
 var _default = OlTsLayerVector; // ==================================================
 
 exports.default = _default;
-},{"ol/layer/Vector":"node_modules/ol/layer/Vector.js","ol/format/GeoJSON":"node_modules/ol/format/GeoJSON.js","../olTsUtils":"src/ol_ts/olTsUtils.js"}],"src/ol_ts/layer/OlTsLayerORS.js":[function(require,module,exports) {
+},{"ol/layer/Vector":"node_modules/ol/layer/Vector.js","ol/format/GeoJSON":"node_modules/ol/format/GeoJSON.js","../utils":"src/utils.js"}],"src/layer/OlTsLayerORS.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -68471,7 +68471,7 @@ function (_OlTsLayerVector) {
 var _default = OlTsLayerORS; // ========================================================
 
 exports.default = _default;
-},{"ol/format/GeoJSON":"node_modules/ol/format/GeoJSON.js","./OlTsLayerVector":"src/ol_ts/layer/OlTsLayerVector.js"}],"src/ol_ts/layer/OlTsLayerGroupORS.js":[function(require,module,exports) {
+},{"ol/format/GeoJSON":"node_modules/ol/format/GeoJSON.js","./OlTsLayerVector":"src/layer/OlTsLayerVector.js"}],"src/layer/OlTsLayerGroupORS.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -68481,7 +68481,7 @@ exports.default = void 0;
 
 var _Group = _interopRequireDefault(require("ol/layer/Group"));
 
-var _olTsUtils = require("../olTsUtils");
+var _utils = require("../utils");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68519,7 +68519,7 @@ function (_OlLayerGroup) {
     var baseOptions = _objectSpread({}, options);
 
     delete baseOptions.layers;
-    baseOptions.layers = _olTsUtils.olTsUtilsJSON2Layers.json2Layers(options.layers);
+    baseOptions.layers = _utils.olTsUtilsJSON2Layers.json2Layers(options.layers);
     return _possibleConstructorReturn(this, _getPrototypeOf(OlTsLayerGroupORS).call(this, baseOptions));
   }
 
@@ -68528,7 +68528,7 @@ function (_OlLayerGroup) {
 
 var _default = OlTsLayerGroupORS;
 exports.default = _default;
-},{"ol/layer/Group":"node_modules/ol/layer/Group.js","../olTsUtils":"src/ol_ts/olTsUtils.js"}],"src/ol_ts/olTsLayer.js":[function(require,module,exports) {
+},{"ol/layer/Group":"node_modules/ol/layer/Group.js","../utils":"src/utils.js"}],"src/layer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -68576,7 +68576,7 @@ var _OlTsLayerORS = _interopRequireDefault(require("./layer/OlTsLayerORS"));
 var _OlTsLayerGroupORS = _interopRequireDefault(require("./layer/OlTsLayerGroupORS"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./layer/OlTsLayerGroup":"src/ol_ts/layer/OlTsLayerGroup.js","./layer/OlTsLayerScale":"src/ol_ts/layer/OlTsLayerScale.js","./layer/OlTsLayerVector":"src/ol_ts/layer/OlTsLayerVector.js","./layer/OlTsLayerORS":"src/ol_ts/layer/OlTsLayerORS.js","./layer/OlTsLayerGroupORS":"src/ol_ts/layer/OlTsLayerGroupORS.js"}],"node_modules/ol-ext/util/element.js":[function(require,module,exports) {
+},{"./layer/OlTsLayerGroup":"src/layer/OlTsLayerGroup.js","./layer/OlTsLayerScale":"src/layer/OlTsLayerScale.js","./layer/OlTsLayerVector":"src/layer/OlTsLayerVector.js","./layer/OlTsLayerORS":"src/layer/OlTsLayerORS.js","./layer/OlTsLayerGroupORS":"src/layer/OlTsLayerGroupORS.js"}],"node_modules/ol-ext/util/element.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -68994,7 +68994,7 @@ var _Heatmap = _interopRequireDefault(require("ol/layer/Heatmap"));
 
 var _extent = require("ol/extent");
 
-var _olTsLayer = require("../../../../src/ol_ts/olTsLayer");
+var _layer = require("../../../../src/layer");
 
 var _element = _interopRequireDefault(require("ol-ext/util/element"));
 
@@ -69944,7 +69944,7 @@ ol_control_LayerSwitcher.prototype.drawList = function (ul, collection) {
 
         this.drawList(ul2, layer.getLayers());
       }
-    } else if (layer instanceof _Vector.default) li.classList.add('ol-layer-vector');else if (layer instanceof _VectorTile.default) li.classList.add('ol-layer-vector');else if (layer instanceof _Tile.default) li.classList.add('ol-layer-tile');else if (layer instanceof _Image.default) li.classList.add('ol-layer-image');else if (layer instanceof _Heatmap.default) li.classList.add('ol-layer-heatmap');else if (layer instanceof _olTsLayer.OlTsLayerScale) li.classList.add('ts-layer-scale'); // ====> TSIG_OL 
+    } else if (layer instanceof _Vector.default) li.classList.add('ol-layer-vector');else if (layer instanceof _VectorTile.default) li.classList.add('ol-layer-vector');else if (layer instanceof _Tile.default) li.classList.add('ol-layer-tile');else if (layer instanceof _Image.default) li.classList.add('ol-layer-image');else if (layer instanceof _Heatmap.default) li.classList.add('ol-layer-heatmap');else if (layer instanceof _layer.OlTsLayerScale) li.classList.add('ts-layer-scale'); // ====> TSIG_OL 
     // Dispatch a dralist event to allow customisation
 
 
@@ -70001,7 +70001,7 @@ ol_control_LayerSwitcher.prototype.setprogress_ = function (layer) {
 
 var _default = ol_control_LayerSwitcher;
 exports.default = _default;
-},{"ol-ext/util/ext":"node_modules/ol-ext/util/ext.js","ol/Observable":"node_modules/ol/Observable.js","ol/control/Control":"node_modules/ol/control/Control.js","ol/layer/Tile":"node_modules/ol/layer/Tile.js","ol/layer/Vector":"node_modules/ol/layer/Vector.js","ol/layer/VectorTile":"node_modules/ol/layer/VectorTile.js","ol/layer/Image":"node_modules/ol/layer/Image.js","ol/layer/Heatmap":"node_modules/ol/layer/Heatmap.js","ol/extent":"node_modules/ol/extent.js","../../../../src/ol_ts/olTsLayer":"src/ol_ts/olTsLayer.js","ol-ext/util/element":"node_modules/ol-ext/util/element.js"}],"node_modules/ol/MapEvent.js":[function(require,module,exports) {
+},{"ol-ext/util/ext":"node_modules/ol-ext/util/ext.js","ol/Observable":"node_modules/ol/Observable.js","ol/control/Control":"node_modules/ol/control/Control.js","ol/layer/Tile":"node_modules/ol/layer/Tile.js","ol/layer/Vector":"node_modules/ol/layer/Vector.js","ol/layer/VectorTile":"node_modules/ol/layer/VectorTile.js","ol/layer/Image":"node_modules/ol/layer/Image.js","ol/layer/Heatmap":"node_modules/ol/layer/Heatmap.js","ol/extent":"node_modules/ol/extent.js","../../../../src/layer":"src/layer.js","ol-ext/util/element":"node_modules/ol-ext/util/element.js"}],"node_modules/ol/MapEvent.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -95228,7 +95228,7 @@ ol_interaction_UndoRedo.prototype.hasRedo = function () {
 
 var _default = ol_interaction_UndoRedo;
 exports.default = _default;
-},{"../util/ext":"node_modules/ol-ext/util/ext.js","ol/interaction/Interaction":"node_modules/ol/interaction/Interaction.js","ol/layer/Vector":"node_modules/ol/layer/Vector.js","ol/Observable":"node_modules/ol/Observable.js","../source/Vector":"node_modules/ol-ext/source/Vector.js"}],"src/ol_ts/control/OlTsEditionBar.js":[function(require,module,exports) {
+},{"../util/ext":"node_modules/ol-ext/util/ext.js","ol/interaction/Interaction":"node_modules/ol/interaction/Interaction.js","ol/layer/Vector":"node_modules/ol/layer/Vector.js","ol/Observable":"node_modules/ol/Observable.js","../source/Vector":"node_modules/ol-ext/source/Vector.js"}],"src/control/OlTsEditionBar.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -95250,7 +95250,7 @@ var _Select = _interopRequireDefault(require("ol/interaction/Select"));
 
 var _condition = require("ol/events/condition");
 
-var _olTsUtils = require("../olTsUtils");
+var _utils = require("../utils");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -95463,7 +95463,7 @@ function (_OlExtControlBar) {
 
       botones[_this.layer.geometryType].Select = new _Select.default({
         condition: _condition.click,
-        style: _olTsUtils.olTsUtilsJSON2Style.styleEdit(),
+        style: _utils.olTsUtilsJSON2Style.styleEdit(),
         layers: function layers(lyr) {
           return lyr === _this.layer;
         }
@@ -95577,7 +95577,7 @@ function (_OlExtControlBar) {
 
 var _default = OlTsEditionBar;
 exports.default = _default;
-},{"ol-ext/dist/ol-ext.css":"node_modules/ol-ext/dist/ol-ext.css","ol-ext/control/Bar":"node_modules/ol-ext/control/Bar.js","ol-ext/control/EditBar":"node_modules/ol-ext/control/EditBar.js","ol-ext/control/Button":"node_modules/ol-ext/control/Button.js","ol-ext/interaction/UndoRedo":"node_modules/ol-ext/interaction/UndoRedo.js","ol/interaction/Select":"node_modules/ol/interaction/Select.js","ol/events/condition":"node_modules/ol/events/condition.js","../olTsUtils":"src/ol_ts/olTsUtils.js"}],"src/ol_ts/map/OlTsMap.js":[function(require,module,exports) {
+},{"ol-ext/dist/ol-ext.css":"node_modules/ol-ext/dist/ol-ext.css","ol-ext/control/Bar":"node_modules/ol-ext/control/Bar.js","ol-ext/control/EditBar":"node_modules/ol-ext/control/EditBar.js","ol-ext/control/Button":"node_modules/ol-ext/control/Button.js","ol-ext/interaction/UndoRedo":"node_modules/ol-ext/interaction/UndoRedo.js","ol/interaction/Select":"node_modules/ol/interaction/Select.js","ol/events/condition":"node_modules/ol/events/condition.js","../utils":"src/utils.js"}],"src/map/OlTsMap.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -95599,7 +95599,7 @@ var _condition = require("ol/events/condition");
 
 var _OlTsEditionBar = _interopRequireDefault(require("../control/OlTsEditionBar"));
 
-var _olTsUtils = require("../olTsUtils");
+var _utils = require("../utils");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -95669,7 +95669,7 @@ function (_OlMap) {
       baseOptions.view = new _View.default(options.view);
     }
 
-    baseOptions.layers = _olTsUtils.olTsUtilsJSON2Layer.json2Layers(options.layers);
+    baseOptions.layers = _utils.olTsUtilsJSON2Layer.json2Layers(options.layers);
     _this = _possibleConstructorReturn(this, _getPrototypeOf(olTsMap).call(this, baseOptions));
     _this.workLayer = undefined;
     _this.editionBar = undefined;
@@ -95763,7 +95763,7 @@ function (_OlMap) {
       if (!this.interactionMap.highlight) {
         this.interactionMap.highlight = new _Select.default({
           condition: _condition.pointerMove,
-          style: _olTsUtils.olTsUtilsJSON2Style.styleSelect(),
+          style: _utils.olTsUtilsJSON2Style.styleSelect(),
           layers: function layers(lyr) {
             if (_this2.workLayer) {
               if (lyr === _this2.workLayer) {
@@ -95789,7 +95789,7 @@ function (_OlMap) {
 
 var _default = olTsMap;
 exports.default = _default;
-},{"ol/util":"node_modules/ol/util.js","ol/Map":"node_modules/ol/Map.js","ol/View":"node_modules/ol/View.js","ol/proj":"node_modules/ol/proj.js","ol/interaction/Select":"node_modules/ol/interaction/Select.js","ol/events/condition":"node_modules/ol/events/condition.js","../control/OlTsEditionBar":"src/ol_ts/control/OlTsEditionBar.js","../olTsUtils":"src/ol_ts/olTsUtils.js"}],"examples/visor/main.js":[function(require,module,exports) {
+},{"ol/util":"node_modules/ol/util.js","ol/Map":"node_modules/ol/Map.js","ol/View":"node_modules/ol/View.js","ol/proj":"node_modules/ol/proj.js","ol/interaction/Select":"node_modules/ol/interaction/Select.js","ol/events/condition":"node_modules/ol/events/condition.js","../control/OlTsEditionBar":"src/control/OlTsEditionBar.js","../utils":"src/utils.js"}],"examples/visor/main.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -95807,7 +95807,7 @@ var _capas = _interopRequireDefault(require("./json/capas.js"));
 
 var _LayerSwitcher2 = _interopRequireDefault(require("./external_Modules/layerSwitcher/LayerSwitcher"));
 
-var _OlTsMap = _interopRequireDefault(require("../../src/ol_ts/map/OlTsMap"));
+var _OlTsMap = _interopRequireDefault(require("../../src/map/OlTsMap"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -95870,7 +95870,7 @@ var _default = function _default() {
 };
 
 exports.default = _default;
-},{"ol/ol.css":"node_modules/ol/ol.css","./external_Modules/layerSwitcher/LayerSwitcher.css":"examples/visor/external_Modules/layerSwitcher/LayerSwitcher.css","./css/main.css":"examples/visor/css/main.css","./json/capas.js":"examples/visor/json/capas.js","./external_Modules/layerSwitcher/LayerSwitcher":"examples/visor/external_Modules/layerSwitcher/LayerSwitcher.js","../../src/ol_ts/map/OlTsMap":"src/ol_ts/map/OlTsMap.js"}],"index.js":[function(require,module,exports) {
+},{"ol/ol.css":"node_modules/ol/ol.css","./external_Modules/layerSwitcher/LayerSwitcher.css":"examples/visor/external_Modules/layerSwitcher/LayerSwitcher.css","./css/main.css":"examples/visor/css/main.css","./json/capas.js":"examples/visor/json/capas.js","./external_Modules/layerSwitcher/LayerSwitcher":"examples/visor/external_Modules/layerSwitcher/LayerSwitcher.js","../../src/map/OlTsMap":"src/map/OlTsMap.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _main = _interopRequireDefault(require("./examples/visor/main"));
@@ -95906,7 +95906,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51319" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58723" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
