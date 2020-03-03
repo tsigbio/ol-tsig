@@ -1,8 +1,7 @@
 
 /**
- * @module ol_ts/layer
+ * @module ol-tsig/layer
  */
-
 export { default as OlTsLayerGroup } from './layer/LayerGroup.js';
 export { default as OlTsLayerScale } from './layer/LayerScale.js';
 export { default as OlTsLayerVector } from './layer/LayerVector.js';

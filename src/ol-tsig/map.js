@@ -1,6 +1,6 @@
 
 /**
- * @module olTs/map
+ * @module ol-tsig/map
  */
 
 export { default as OlTsMap } from './map/Map';
