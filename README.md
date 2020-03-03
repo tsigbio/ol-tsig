@@ -1,4 +1,4 @@
-# tsig-OL
+# OL-TSIG
 
 Librería Para extender las clases de Openlayers, permitiendo su configuración a partir de un fichero JSON.
 Dicha configuración tiene la misma estructura que una definición de mapa tipica de OL pero sin la creación de Objetos.
@@ -59,6 +59,3 @@ var map = new Map({
     }
 });
 ```
-
-
-
