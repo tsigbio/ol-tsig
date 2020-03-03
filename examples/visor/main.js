@@ -4,17 +4,11 @@ import './css/main.css';
 
 import mapa from './json/capas.js';
 import OlExtControlLayerSwitcher from './external_Modules/layerSwitcher/LayerSwitcher';
-import OlTsMap from '../../src/ol_ts/map/Map';
+import OlTsMap from '../../src/ol_ts/map/OlTsMap';
 
 export default () => {
-    const map = new OlTsMap({
-        target: 'map',
-        layers: mapa.layers,
-        view: {
-            center: [0, 0],
-            zoom: 0
-        }
-    });
+    mapa.target = 'map';
+    const map = new OlTsMap(mapa);
 
     // Añadimos control de capas dentro del mapa
     const switcher = new OlExtControlLayerSwitcher({

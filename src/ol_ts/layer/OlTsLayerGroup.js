@@ -1,5 +1,5 @@
 import OlLayerGroup from 'ol/layer/Group';
-import { OlTsUtilsJSON2Layers } from '../utils';
+import { OlTsUtilsJSON2Layers } from '../olTsUtils';
 
 // Constructor
 class OlTsLayerGroup extends OlLayerGroup {

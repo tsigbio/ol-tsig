@@ -2,11 +2,12 @@
 import { getUid as olGetUid } from 'ol/util';
 import OlMap from 'ol/Map';
 import OlView from 'ol/View';
+import { transform } from 'ol/proj';
 import OlInteractionSelect from 'ol/interaction/Select';
 import { pointerMove as olEventsConditionPointerMove } from 'ol/events/condition';
 
-import OlTsEditionBar from './EditionBar';
-import { olTsUtilsJSON2Layer, olTsUtilsJSON2Style } from '../utils';
+import OlTsEditionBar from '../control/OlTsEditionBar';
+import { olTsUtilsJSON2Layer, olTsUtilsJSON2Style } from '../olTsUtils';
 
 // ------------------------------------------------------------------------------
 
@@ -35,6 +36,9 @@ class olTsMap extends OlMap {
         delete baseOptions.layers;
         delete baseOptions.view;
         if (options.view) {
+            if (options.view.projectionCenter) {
+                options.view.center = transform(options.view.center, options.view.projectionCenter, 'EPSG:3857');
+            }
             baseOptions.view = new OlView(options.view);
         }
         baseOptions.layers = olTsUtilsJSON2Layer.json2Layers(options.layers);

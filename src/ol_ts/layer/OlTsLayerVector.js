@@ -1,7 +1,7 @@
 
 import OlLayerVector from 'ol/layer/Vector';
 import OlFormatGeoJSON from 'ol/format/GeoJSON';
-import { olTsUtilsJSON2Source } from '../utils';
+import { olTsUtilsJSON2Source } from '../olTsUtils';
 
 class OlTsLayerVector extends OlLayerVector {
     constructor(optOptions) {

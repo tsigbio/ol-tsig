@@ -1,6 +1,6 @@
 
 import OlFormatGeoJSON from 'ol/format/GeoJSON';
-import { OlTsLayerVector } from './LayerVector';
+import { OlTsLayerVector } from './OlTsLayerVector';
 
 // Constructor
 class OlTsLayerORS extends OlTsLayerVector {

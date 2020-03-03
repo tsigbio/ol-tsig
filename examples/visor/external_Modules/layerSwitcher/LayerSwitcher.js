@@ -14,7 +14,7 @@ import ol_layer_Image from 'ol/layer/Image'
 import ol_layer_Heatmap from 'ol/layer/Heatmap'
 import {intersects as ol_extent_intersects} from 'ol/extent'
 
-import { LayerScale as ts_layer_scale } from '../../../../src/ol_ts/layer'  // =====> TSIG_OL
+import { OlTsLayerScale as ts_layer_scale } from '../../../../src/ol_ts/olTsLayer'  // =====> TSIG_OL
 
 import ol_ext_element from 'ol-ext/util/element' // modificado =====> TSIG_OL
 

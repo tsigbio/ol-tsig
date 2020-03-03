@@ -6,7 +6,7 @@ import OlExtInteractionUndoRedo from 'ol-ext/interaction/UndoRedo';
 import OlInteractionSelect from 'ol/interaction/Select';
 import { click as olEventsConditionClick } from 'ol/events/condition';
 
-import { olTsUtilsJSON2Style } from '../utils';
+import { olTsUtilsJSON2Style } from '../olTsUtils';
 
 // ------------------------------------------------------------------------------
 

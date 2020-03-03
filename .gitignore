@@ -2,3 +2,4 @@ node-modules/
 /node_modules/
 .cache/
 /.cache/
+ver.txt

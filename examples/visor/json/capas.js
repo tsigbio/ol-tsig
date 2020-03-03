@@ -3,7 +3,10 @@ var key = 'pk.eyJ1IjoiYWhvY2V2YXIiLCJhIjoiY2pzbmg0Nmk5MGF5NzQzbzRnbDNoeHJrbiJ9.7
 
 var mapa = {
     view: {
-
+        // projection: 'EPSG:4326',
+        projectionCenter: 'EPSG:4326',
+        center: [-3.0, 41.0],
+        zoom: 6
     },
     layers: [
 
@@ -119,7 +122,7 @@ var mapa = {
             geometryType: 'Polygon', // [Point, LineString, Polygon, Circle]
             source: {
                 type: 'Vector',
-                // url: '/json/MUC_AB_FIELDS.geojson',
+                // url: '/examples/json/MUC_AB_FIELDS.geojson',
                 url: 'https://openlayers.org/en/v5.3.0/examples/data/geojson/countries.geojson',
                 format: {
                     type: 'GeoJSON'
@@ -157,7 +160,7 @@ var mapa = {
             geometryType: 'LineString', // [Point, LineString, Polygon, Circle]
             source: {
                 type: 'Vector',
-                // url: '/json/MUC_AB_FIELDS.geojson',
+                // url: '/examples/json/MUC_AB_FIELDS.geojson',
                 url: 'capalineas.geojson',
                 format: {
                     type: 'GeoJSON'
@@ -180,6 +183,7 @@ var mapa = {
                 distance: 50,
                 source: {
                     type: 'Vector',
+                    // url: '/examples/geojson/DE_fabriken_GCS.geojson',
                     url: 'DE_fabriken_GCS.geojson',
                     format: {
                         type: 'GeoJSON'
@@ -225,7 +229,7 @@ var mapa = {
             geometryType: 'Point', // [Point, LineString, Polygon, Circle]
             source: {
                 type: 'Vector',
-                // url: '/json/MUC_AB_FIELDS.geojson',
+                // url: '/examples/geojson/MUC_AB_FIELDS.geojson',
                 url: 'capapuntos.geojson',
                 format: {
                     type: 'GeoJSON'
