@@ -1,11 +1,12 @@
 {
     "name": "ol-tsig",
-    "version": "1.1.0",
+    "version": "0.0.1",
     "description": "",
-    "main": "build/lib/index.js",
+    "main": "index.js",
     "scripts": {
         "dev": "shx cp -rf examples/geojson/* dist/ && parcel build --public-url . index.html --out-dir buildParcel",
         "start": "shx mkdir -p buildParcel && shx cp -rf examples/geojson/* buildParcel/ && parcel serve examples/index.html --out-dir buildParcel",
+        "build-package": "shx cp package.json build && shx cp README.md build && shx cp -rf  src build && npm run build",
         "build": "tsc --project tsconfig-build.json",
         "dist": "webpack --config=config/webpack.config.js --env.production=true",
         "dist-dev": "webpack --config=config/webpack.config.js --env.development=true",

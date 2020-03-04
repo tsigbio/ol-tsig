@@ -4,6 +4,10 @@ examples/
 test/
 .editorconfig
 .eslintrc
+.cache/
+.vscode/
 webpack.*.js
 tsconfig.*.json
 config/
+buildParcel/
+postcss.config.js
