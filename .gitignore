@@ -5,3 +5,4 @@ node-modules/
 buildParcel/
 /buildParcel/
 ver.txt
+build/

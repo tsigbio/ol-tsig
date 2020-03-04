@@ -27,7 +27,7 @@ OlInteractionSelect.prototype.giveSelectedStyle_ = function(feature) {
 
 // ------------------------------------------------------------------------------
 
-class olTsMap extends OlMap {
+class OlTsMap extends OlMap {
     constructor(optOptions) {
         const options = optOptions || {};
         const baseOptions = {
@@ -138,4 +138,4 @@ class olTsMap extends OlMap {
     }
 }
 
-export default olTsMap;
+export default OlTsMap;

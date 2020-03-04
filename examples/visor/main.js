@@ -11,6 +11,7 @@ export default () => {
     const map = new OlTsMap(mapa);
 
     // Añadimos control de capas dentro del mapa
+
     const switcher = new OlExtControlLayerSwitcher({
         show_progress: true,
         extent: true,
@@ -43,6 +44,7 @@ export default () => {
         },
         style: 'workLayer'
     });
+
     /*
     switcher.on('drawlist', function(e) {
         var layer = e.layer;
@@ -54,6 +56,7 @@ export default () => {
       });
 
     */
+
     map.addControl(switcher);
     map.activateInteraction('highlight');
     /*

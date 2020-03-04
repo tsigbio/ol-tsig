@@ -1,4 +1,4 @@
-import 'ol-ext/dist/ol-ext.css';
+// import 'ol-ext/dist/ol-ext.css';
 import OlExtControlBar from 'ol-ext/control/Bar';
 import OlExtControlEditBar from 'ol-ext/control/EditBar';
 import OlExtControlButton from 'ol-ext/control/Button';

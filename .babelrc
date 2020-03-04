@@ -1,0 +1,5 @@
+{
+  "presets": [
+    "@babel/preset-env" // Babel 7. En babel 6 la configuracion de present es ["env"]
+  ]
+}
