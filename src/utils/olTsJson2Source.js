@@ -28,13 +28,11 @@ function json2sources(layer) {
 
 // ------------------------------------------------------------------
 
-const olTsUtilsJSON2Source = {
+const olTsJson2Source = {
     json2source: json2source,
     json2sources: json2sources
 };
 
-export {
-    olTsUtilsJSON2Source
-};
+export default olTsJson2Source;
 
 // ------------------------------------------------------------------

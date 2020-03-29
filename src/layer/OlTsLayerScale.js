@@ -1,5 +1,5 @@
 import OlLayerGroup from 'ol/layer/Group';
-import { olTsUtilsJSON2Layer, OlTsError } from '../utils';
+import { olTsJson2Layer, OlTsError } from '../utils';
 
 // ==================================================
 
@@ -10,7 +10,7 @@ class OlTsLayerScale extends OlLayerGroup {
             ...options
         };
         delete baseOptions.layers;
-        baseOptions.layers = olTsUtilsJSON2Layer.json2Layers(options.layers);
+        baseOptions.layers = olTsJson2Layer.json2Layers(options.layers);
         if (scaleLayerOK(baseOptions.layers)) {
             super(baseOptions);
         } else {

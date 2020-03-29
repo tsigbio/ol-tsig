@@ -15,3 +15,5 @@ if (window.ol && !ol.tsig) {
         utils: olTsUtils
     };
 }
+
+export { OlTsMap, olTsLayer, olTsControl, olTsUtils };

@@ -6,7 +6,7 @@ import OlExtInteractionUndoRedo from 'ol-ext/interaction/UndoRedo';
 import OlInteractionSelect from 'ol/interaction/Select';
 import { click as olEventsConditionClick } from 'ol/events/condition';
 
-import { olTsUtilsJSON2Style } from '../utils';
+import { olTsJson2Style } from '../utils';
 
 // ------------------------------------------------------------------------------
 
@@ -154,7 +154,7 @@ class OlTsEditionBar extends OlExtControlBar {
             // ------ Barra de edición -----------
             botones[this.layer.geometryType].Select = new OlInteractionSelect({
                 condition: olEventsConditionClick,
-                style: olTsUtilsJSON2Style.styleEdit(),
+                style: olTsJson2Style.styleEdit(),
                 layers: (lyr) => {
                     return (lyr === this.layer);
                 }

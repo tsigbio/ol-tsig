@@ -7,7 +7,7 @@ import OlInteractionSelect from 'ol/interaction/Select';
 import { pointerMove as olEventsConditionPointerMove } from 'ol/events/condition';
 
 import OlTsEditionBar from '../control/OlTsEditionBar';
-import { olTsUtilsJSON2Layer, olTsUtilsJSON2Style } from '../utils';
+import { olTsJson2Layer, olTsJson2Style } from '../utils';
 
 // ------------------------------------------------------------------------------
 
@@ -41,7 +41,7 @@ class OlTsMap extends OlMap {
             }
             baseOptions.view = new OlView(options.view);
         }
-        baseOptions.layers = olTsUtilsJSON2Layer.json2Layers(options.layers);
+        baseOptions.layers = olTsJson2Layer.json2Layers(options.layers);
         super(baseOptions);
         this.workLayer = undefined;
         this.editionBar = undefined;
@@ -119,7 +119,7 @@ class OlTsMap extends OlMap {
         if (!this.interactionMap.highlight) {
             this.interactionMap.highlight = new OlInteractionSelect({
                 condition: olEventsConditionPointerMove,
-                style: olTsUtilsJSON2Style.styleSelect(),
+                style: olTsJson2Style.styleSelect(),
                 layers: (lyr) => {
                     if (this.workLayer) {
                         if (lyr === this.workLayer) {

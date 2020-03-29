@@ -1,5 +1,5 @@
 import OlLayerGroup from 'ol/layer/Group';
-import { olTsUtilsJSON2Layers } from '../utils';
+import { olTsJson2Layer } from '../utils';
 
 // Constructor
 class OlTsLayerGroupORS extends OlLayerGroup {
@@ -7,7 +7,7 @@ class OlTsLayerGroupORS extends OlLayerGroup {
         const options = optOptions || {};
         const baseOptions = { ...options };
         delete baseOptions.layers;
-        baseOptions.layers = olTsUtilsJSON2Layers.json2Layers(options.layers);
+        baseOptions.layers = olTsJson2Layer.json2Layers(options.layers);
         super(baseOptions);
     }
 }

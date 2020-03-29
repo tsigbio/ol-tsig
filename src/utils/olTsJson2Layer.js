@@ -1,6 +1,6 @@
 import * as olLayers from 'ol/layer';
 import * as olTsLayers from '../layer';
-import { olTsUtilsJSON2Source, olTsUtilsJSON2Style } from '../utils';
+import { olTsJson2Source, olTsJson2Style } from '../utils';
 
 // ------------------------------------------------------------------
 
@@ -16,12 +16,12 @@ function layersClass() {
 function json2Layer(layer) {
     const ly = JSON.parse(JSON.stringify(layer));
     if (ly.sources) {
-        ly.source = olTsUtilsJSON2Source.json2sources(ly);
+        ly.source = olTsJson2Source.json2sources(ly);
     } else if (ly.source) {
-        ly.source = olTsUtilsJSON2Source.json2source(ly.source);
+        ly.source = olTsJson2Source.json2source(ly.source);
     }
     if (ly.style) {
-        ly.style = olTsUtilsJSON2Style.json2Style(ly.style);
+        ly.style = olTsJson2Style.json2Style(ly.style);
     }
     const l = new (layersClass())[ly.type](ly);
     return l;
@@ -39,13 +39,11 @@ function json2Layers(layers) {
 
 // ------------------------------------------------------------------
 
-const olTsUtilsJSON2Layer = {
+const olTsJson2Layer = {
     json2Layer: json2Layer,
     json2Layers: json2Layers
 };
 
-export {
-    olTsUtilsJSON2Layer
-};
+export default olTsJson2Layer;
 
 // ------------------------------------------------------------------

@@ -128,14 +128,12 @@ function styleEdit(objJSON) {
 
 // ------------------------------------------------------------------
 
-const olTsUtilsJSON2Style = {
+const olTsJson2Style = {
     json2Style: json2Style,
     styleSelect: styleSelect,
     styleEdit: styleEdit
 };
 
-export {
-    olTsUtilsJSON2Style
-};
+export default olTsJson2Style;
 
 // ------------------------------------------------------------------
