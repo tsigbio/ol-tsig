@@ -1,6 +1,7 @@
 import * as olLayers from 'ol/layer';
 import * as olTsLayers from '../layer';
-import { olTsJson2Source, olTsJson2Style } from '../utils';
+import olTsJson2Source from '../utils/olTsJson2Source';
+import olTsJson2Style from '../utils/olTsJson2Style';
 
 // ------------------------------------------------------------------
 

@@ -2,18 +2,34 @@
  */
 /* global ol */
 
-import * as olTsLayer from './layer';
-import * as olTsControl from './control';
-import * as OlTsMap from './map';
-import * as olTsUtils from './utils';
+import * as tsLayer from './layer';
+import * as tsControl from './control';
+import * as tsMap from './map';
+import * as tsUtils from './utils';
+
+const olTs = {
+    layer: tsLayer,
+    control: tsControl,
+    Map: tsMap,
+    utils: tsUtils
+};
 
 if (window.ol && !ol.tsig) {
-    ol.tsig = {
-        layer: olTsLayer,
-        control: olTsControl,
-        map: OlTsMap,
-        utils: olTsUtils
-    };
+    ol.tsig = olTs;
 }
 
-export { OlTsMap, olTsLayer, olTsControl, olTsUtils };
+// export { OlTsMap, olTsLayer, olTsControl, olTsUtils };
+export { default as OlTsMap } from './map/OlTsMap';
+
+export { default as OlTsEditionBar } from './control/OlTsEditionBar';
+
+export { default as OlTsError } from './utils/OlTsError';
+export { default as olTsJson2Style } from './utils/olTsJson2Style';
+export { default as olTsJson2Source } from './utils/olTsJson2Source';
+export { default as olTsJson2Layer } from './utils/olTsJson2Layer';
+
+export { default as OlTsLayerGroup } from './layer/OlTsLayerGroup';
+export { default as OlTsLayerScale } from './layer/OlTsLayerScale';
+export { default as OlTsLayerVector } from './layer/OlTsLayerVector';
+export { default as OlTsLayerORS } from './layer/OlTsLayerORS';
+export { default as OlTsLayerGroupORS } from './layer/OlTsLayerGroupORS';

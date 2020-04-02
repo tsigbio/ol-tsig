@@ -1,5 +1,6 @@
 import OlLayerGroup from 'ol/layer/Group';
-import { olTsJson2Layer, OlTsError } from '../utils';
+import olTsJson2Layer from '../utils/olTsJson2Layer';
+import OlTsError from '../utils/OlTsError';
 
 // ==================================================
 

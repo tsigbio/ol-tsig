@@ -7,7 +7,8 @@ import OlInteractionSelect from 'ol/interaction/Select';
 import { pointerMove as olEventsConditionPointerMove } from 'ol/events/condition';
 
 import OlTsEditionBar from '../control/OlTsEditionBar';
-import { olTsJson2Layer, olTsJson2Style } from '../utils';
+import olTsJson2Layer from '../utils/olTsJson2Layer';
+import olTsJson2Style from '../utils/olTsJson2Style';
 
 // ------------------------------------------------------------------------------
 
