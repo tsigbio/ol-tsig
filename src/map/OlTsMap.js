@@ -130,6 +130,10 @@ class OlTsMap extends OlMap {
                         this._layerPaint = false;
                         return false;
                     }
+                    if (lyr.get('noHighlight')) {
+                        this._layerPaint = false;
+                        return false;
+                    }
                     this._layerPaint = lyr;
                     return true;
                 }
