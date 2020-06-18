@@ -1,5 +1,7 @@
 import * as olFormat from 'ol/format';
 import * as olSource from 'ol/source';
+import { bbox as bboxStrategy } from 'ol/loadingstrategy';
+import { transformExtent as transform } from 'ol/proj';
 
 // ------------------------------------------------------------------
 
@@ -10,7 +12,19 @@ function json2source(src) {
     if (src.format) {
         src.format = new olFormat[src.format.type](src.format);
     }
-    return new (olSource[src.type])(src);
+    let psrc = {};
+    if (src.strategy && src.strategy === 'bbox') {
+        src.strategy = bboxStrategy;
+        const u = src.url;
+        const p = src.projection;
+        src.url = function(extent, resolution, projection) {
+            const b = (projection.getCode() !== p) ? transform(extent, projection, p) : extent;
+            psrc.refresh();
+            return u + b.join(',');
+        };
+    }
+    psrc = new (olSource[src.type])(src);
+    return psrc;
 }
 
 function json2sources(layer) {
