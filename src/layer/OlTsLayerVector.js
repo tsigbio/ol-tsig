@@ -23,11 +23,17 @@ class OlTsLayerVector extends OlLayerVector {
                     const st = _style.clone();
                     const tx = st.getText();
                     if (tx && labels.visible) {
-                        let t = labels.template;
-                        for (let i = 0; i < labels.fields.length; i++) {
-                            t = etiquetaCluster[labels.fields[i][0]](t, feature, labels.fields[i]);
+                        if (labels.template) {
+                            let t = labels.template;
+                            for (let i = 0; i < labels.fields.length; i++) {
+                                t = etiquetaCluster[labels.fields[i][0]](t, feature, labels.fields[i]);
+                            }
+                            tx.setText(t);
+                        } else {
+                            if (labels.content) {
+                                tx.setText(labels.content(feature, labels.fields));
+                            }
                         }
-                        tx.setText(t);
                     }
                     return st;
                 });
@@ -45,33 +51,32 @@ class OlTsLayerVector extends OlLayerVector {
     }
 
     save(features) {
-        // console.dir(this);
-        // console.log(features);
-        const jsAdd = [];
-        const jsMod = [];
-        const idDel = []; // Se presupone que los elementos a borrar tienen ID
-        for (const fea of Object.keys(features)) {
-            console.log(fea);
-            if (features[fea].type === 'addfeature') {
-                jsAdd.push(features[fea].feature);
-            } else if (features[fea].type === 'changefeature') {
-                jsMod.push(features[fea].feature);
-            } else if (features[fea].type === 'removefeature') {
-                idDel.push(features[fea].feature.getId());
+        if (this.saveJSON) {
+            const jsAdd = [];
+            const jsMod = [];
+            const idDel = []; // Se presupone que los elementos a borrar tienen ID
+            for (const fea of Object.keys(features)) {
+                if (features[fea].type === 'addfeature') {
+                    jsAdd.push(features[fea].feature);
+                } else if (features[fea].type === 'changefeature') {
+                    jsMod.push(features[fea].feature);
+                } else if (features[fea].type === 'removefeature') {
+                    idDel.push(features[fea].feature.getId());
+                }
             }
+            const edited = {};
+            if (jsAdd.length) {
+                edited.addfeatures = (new OlFormatGeoJSON({})).writeFeaturesObject(jsAdd);
+            }
+            if (jsMod.length) {
+                edited.changefeature = (new OlFormatGeoJSON({})).writeFeaturesObject(jsMod);
+            }
+            if (idDel.length) {
+                edited.removefeature = idDel;
+            }
+            return this.saveJSON(edited);
         }
-        const edited = {};
-        if (jsAdd.length) {
-            edited.addfeatures = (new OlFormatGeoJSON({})).writeFeaturesObject(jsAdd);
-        }
-        if (jsMod.length) {
-            edited.changefeature = (new OlFormatGeoJSON({})).writeFeaturesObject(jsMod);
-        }
-        if (idDel.length) {
-            edited.removefeature = idDel;
-        }
-        console.log('(LayerVector) SALVANDO capa.');
-        console.log('edited: ', edited);
+        return false;
     }
 }
 
@@ -87,7 +92,7 @@ const etiquetaCluster = {
         for (let j = f.length - 1; j >= 0; --j) {
             s += (f[j].get(field[1]) || 0) * 1;
         }
-        if (field[2]) {
+        if (field[2] !== undefined) {
             s = s.toFixed(field[2]);
         }
         return txt.replace(field[1], s);
@@ -105,7 +110,7 @@ const etiquetaCluster = {
         }
         if (n) {
             s = s / n;
-            if (field[2]) {
+            if (field[2] !== undefined) {
                 s = s.toFixed(field[2]);
             }
         } else {
