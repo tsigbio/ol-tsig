@@ -18,12 +18,15 @@ import olTsJson2Style from '../utils/olTsJson2Style';
 OlInteractionSelect.prototype.giveSelectedStyle_ = function(feature) {
     const key = olGetUid(feature);
     this.featureStyleAssociation_[key] = feature.getStyle();
-    const s = this.featureLayerAssociation_[key].getStyle()(feature);
-    const sI = s.getImage && s.getImage();
-    sI && this.style_.getImage().setRadius(sI.getRadius());
-    const st = (Array.isArray(s)) ? s.slice() : [s];
-    st.push(this.style_);
-    feature.setStyle(st);
+    const f = this.featureLayerAssociation_[key].getStyle();
+    if (f) {
+        const s = f(feature);
+        const sI = s.getImage && s.getImage();
+        sI && this.style_.getImage().setRadius(sI.getRadius());
+        const st = (Array.isArray(s)) ? s.slice() : [s];
+        st.push(this.style_);
+        feature.setStyle(st);
+    }
 };
 
 // ------------------------------------------------------------------------------
