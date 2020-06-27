@@ -15,7 +15,7 @@ class OlTsLayerORS extends OlTsLayerVector {
         });
     }
 
-    addRoute(feature) {
+    addRoute(feature, noDelete) {
         const self = this;
         const ftemp = feature;
         const xhr = new XMLHttpRequest();
@@ -31,7 +31,9 @@ class OlTsLayerORS extends OlTsLayerVector {
                     // console.log('Headers:', this.getAllResponseHeaders());
                     // console.log('JSON: ', JSON.parse(this.response));
                     const src = self.getSource();
-                    src.removeFeature(ftemp);
+                    if (!noDelete) {
+                        src.removeFeature(ftemp);
+                    }
                     const fts = new OlFormatGeoJSON({
                         featureProjection: 'EPSG:3857'
                     }).readFeatures(JSON.parse(this.response));
@@ -50,7 +52,8 @@ class OlTsLayerORS extends OlTsLayerVector {
             }
         };
         const body = {
-            coordinates: ftemp.getGeometry().clone().transform('EPSG:3857', 'EPSG:4326').getCoordinates()
+            coordinates: ftemp.getGeometry().clone().transform('EPSG:3857', 'EPSG:4326').getCoordinates(),
+            radiuses: [5000, -1]
         };
         xhr.send(JSON.stringify(body));
     }

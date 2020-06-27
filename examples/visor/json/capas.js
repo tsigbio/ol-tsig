@@ -1,4 +1,3 @@
-
 var key = 'pk.eyJ1IjoiYWhvY2V2YXIiLCJhIjoiY2pzbmg0Nmk5MGF5NzQzbzRnbDNoeHJrbiJ9.7_-_gL8ur7ZtEiNwRfCy7Q';
 
 var mapa = {
@@ -67,51 +66,49 @@ var mapa = {
             type: 'Tile',
             visible: false,
             sourceSelect: 'siHr_sfl',
-            sources: [
-                {
-                    name: 'siHr_whe',
-                    type: 'XYZ',
-                    title: 'Wheat - High - (r)',
-                    title2: 'Wheat - High - (rain-fed)',
-                    url: 'https://mbtiles.agrisatwebgis.com/suitability-crops-1981-2010/suitability-1981-2010H-siHr_whe/{z}/{x}/{y}.png'
-                }, {
-                    name: 'siHr_sfl',
-                    type: 'XYZ',
-                    title: 'Sunflower - High - (r)',
-                    title2: 'Sunflower - High - (rain-fed)',
-                    url: 'https://mbtiles.agrisatwebgis.com/suitability-crops-1981-2010/suitability-1981-2010H-siHr_sfl/{z}/{x}/{y}.png'
-                }, {
-                    name: 'siHr_sub',
-                    type: 'XYZ',
-                    title: 'Sugar beet - High - (r)',
-                    title2: 'Sugar beet - High - (rain-fed)',
-                    url: 'https://mbtiles.agrisatwebgis.com/suitability-crops-1981-2010/suitability-1981-2010H-siHr_sub/{z}/{x}/{y}.png'
-                }, {
-                    name: 'siHr_rsd',
-                    type: 'XYZ',
-                    title: 'Rapeseed - High - (r)',
-                    title2: 'Rapeseed - High - (rain-fed)',
-                    url: 'https://mbtiles.agrisatwebgis.com/suitability-crops-1981-2010/suitability-1981-2010H-siHr_rsd/{z}/{x}/{y}.png'
-                }, {
-                    name: 'siHr_srg',
-                    type: 'XYZ',
-                    title: 'Sorghum - High - (r)',
-                    title2: 'Sorghum - High - (rain-fed)',
-                    url: 'https://mbtiles.agrisatwebgis.com/suitability-crops-1981-2010/suitability-1981-2010H-siHr_srg/{z}/{x}/{y}.png'
-                }, {
-                    name: 'siHr_mis',
-                    type: 'XYZ',
-                    title: 'Miscanthus - High - (r)',
-                    title2: 'Miscanthus - High - (rain-fed)',
-                    url: 'https://mbtiles.agrisatwebgis.com/suitability-crops-1981-2010/suitability-1981-2010H-siHr_mis/{z}/{x}/{y}.png'
-                }, {
-                    name: 'siHr_swg',
-                    type: 'XYZ',
-                    title: 'Switchgrass - High - (r)',
-                    title2: 'Switchgrass - High - (rain-fed)',
-                    url: 'https://mbtiles.agrisatwebgis.com/suitability-crops-1981-2010/suitability-1981-2010H-siHr_swg/{z}/{x}/{y}.png'
-                }
-            ]
+            sources: [{
+                name: 'siHr_whe',
+                type: 'XYZ',
+                title: 'Wheat - High - (r)',
+                title2: 'Wheat - High - (rain-fed)',
+                url: 'https://mbtiles.agrisatwebgis.com/suitability-crops-1981-2010/suitability-1981-2010H-siHr_whe/{z}/{x}/{y}.png'
+            }, {
+                name: 'siHr_sfl',
+                type: 'XYZ',
+                title: 'Sunflower - High - (r)',
+                title2: 'Sunflower - High - (rain-fed)',
+                url: 'https://mbtiles.agrisatwebgis.com/suitability-crops-1981-2010/suitability-1981-2010H-siHr_sfl/{z}/{x}/{y}.png'
+            }, {
+                name: 'siHr_sub',
+                type: 'XYZ',
+                title: 'Sugar beet - High - (r)',
+                title2: 'Sugar beet - High - (rain-fed)',
+                url: 'https://mbtiles.agrisatwebgis.com/suitability-crops-1981-2010/suitability-1981-2010H-siHr_sub/{z}/{x}/{y}.png'
+            }, {
+                name: 'siHr_rsd',
+                type: 'XYZ',
+                title: 'Rapeseed - High - (r)',
+                title2: 'Rapeseed - High - (rain-fed)',
+                url: 'https://mbtiles.agrisatwebgis.com/suitability-crops-1981-2010/suitability-1981-2010H-siHr_rsd/{z}/{x}/{y}.png'
+            }, {
+                name: 'siHr_srg',
+                type: 'XYZ',
+                title: 'Sorghum - High - (r)',
+                title2: 'Sorghum - High - (rain-fed)',
+                url: 'https://mbtiles.agrisatwebgis.com/suitability-crops-1981-2010/suitability-1981-2010H-siHr_srg/{z}/{x}/{y}.png'
+            }, {
+                name: 'siHr_mis',
+                type: 'XYZ',
+                title: 'Miscanthus - High - (r)',
+                title2: 'Miscanthus - High - (rain-fed)',
+                url: 'https://mbtiles.agrisatwebgis.com/suitability-crops-1981-2010/suitability-1981-2010H-siHr_mis/{z}/{x}/{y}.png'
+            }, {
+                name: 'siHr_swg',
+                type: 'XYZ',
+                title: 'Switchgrass - High - (r)',
+                title2: 'Switchgrass - High - (rain-fed)',
+                url: 'https://mbtiles.agrisatwebgis.com/suitability-crops-1981-2010/suitability-1981-2010H-siHr_swg/{z}/{x}/{y}.png'
+            }]
         },
 
         {
@@ -252,14 +249,15 @@ var mapa = {
                 visible: false,
                 field: 'linea'
             }
-        }
-        /*
-        ,{
+        },
+
+        {
             title: 'Capa de Ruteo',
             type: 'OlTsLayerGroupORS',
             visible: true,
             openInLayerSwitcher: false,
-            layers: [{
+            layers: [
+                {
                     title: 'Puntos',
                     type: 'OlTsLayerVector',
                     geometryType: 'Point',
@@ -277,7 +275,7 @@ var mapa = {
                                 width: 2
                             }
                         }
-                    },
+                    }
                 },
                 {
                     title: 'Rutas',
@@ -295,8 +293,6 @@ var mapa = {
                 }
             ]
         }
-*/
-
     ]
 };
 
