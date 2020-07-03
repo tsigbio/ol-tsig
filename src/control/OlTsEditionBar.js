@@ -220,12 +220,9 @@ class OlTsEditionBar extends OlExtControlBar {
     }
 
     saveChanges() {
-        const featuresChanged = this.getFeaturesChanged();
-        if (featuresChanged) {
-            if (this.layer && this.layer.save) {
-                if (!this.layer.save(featuresChanged)) {
-                    this.undoEdited();
-                }
+        if (this.layer && this.layer.save) {
+            if (!this.layer.save(this.getFeaturesChanged())) {
+                this.undoEdited();
             }
         }
     }
