@@ -41,6 +41,10 @@ class OlTsLayerORS extends OlTsLayerVector {
                         fts[i].ruta = true;
                     }
                     src.addFeatures(fts);
+                    self.dispatchEvent({
+                        type: 'ruteOK',
+                        rute: fts
+                    });
                 } else {
                     self.dispatchEvent({
                         type: 'error',

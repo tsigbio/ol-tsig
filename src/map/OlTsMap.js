@@ -22,7 +22,15 @@ OlInteractionSelect.prototype.giveSelectedStyle_ = function(feature) {
     if (typeof f === 'function') {
         const s = f(feature);
         const sI = s.getImage && s.getImage();
-        sI && this.style_.getImage().setRadius(sI.getRadius());
+        let radio = 0;
+        if (sI) {
+            if (sI.getRadius) {
+                radio = sI.getRadius();
+            } else if (sI.getSize) {
+                radio = Math.max(...sI.getSize()) / 2;
+            }
+        }
+        this.style_.getImage().setRadius(radio);
         const st = (Array.isArray(s)) ? s.slice() : [s];
         st.push(this.style_);
         feature.setStyle(st);
