@@ -19,8 +19,9 @@ function json2source(src) {
         const p = src.projection;
         src.url = function(extent, resolution, projection) {
             const b = (projection.getCode() !== p) ? transform(extent, projection, p) : extent;
+            const pj = p || projection.getCode();
             psrc.refresh();
-            return u + b.join(',');
+            return u + b.join(',') + '&srs=' + pj;
         };
     }
     psrc = new (olSource[src.type])(src);
