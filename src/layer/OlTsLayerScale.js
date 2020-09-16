@@ -33,8 +33,8 @@ function scaleLayerOK(lyrs) {
         lyrs[i].set('visible', true, true);
         const s = getRangeZoom(lyrs[i]);
         for (let j = 0; j < i; j += 1) {
-            if ((s[0] >= r[j][0]) && (s[0] < r[j][1])) return false;
-            if ((s[1] > r[j][0]) && (s[1] <= r[j][1])) return false;
+            if ((s[0] > r[j][0]) && (s[0] < r[j][1])) return false;
+            if ((s[1] > r[j][0]) && (s[1] < r[j][1])) return false;
         }
         r.push(s);
     }
