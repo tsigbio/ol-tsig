@@ -59,3 +59,32 @@ var map = new Map({
     }
 });
 ```
+
+
+# Publicar en el repositorio NPMJS
+
+Tener el usuario local de NPM registrado en la máquina local
+
+```
+npm adduser
+```
+
+Subir los cambios al Github:
+
+```
+git add .
+git commit -m "First commit"
+git remote add origin https://github.com/tsig-idr/ol-tsig.git
+git remote -v
+git push origin master
+```
+
+Compilar y Publicar una nueva distribución en NPM. 
+
+Nota: Cambiar la version del package.json antes de publicar.
+
+```
+npm run build-package
+cd build
+npm publish
+```
