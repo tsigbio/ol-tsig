@@ -55,24 +55,26 @@ class OlTsLayerVector extends OlLayerVector {
             const jsAdd = [];
             const jsMod = [];
             const idDel = []; // Se presupone que los elementos a borrar tienen ID
-            for (const fea of Object.keys(features)) {
-                if (features[fea].type === 'addfeature') {
-                    jsAdd.push(features[fea].feature);
-                } else if (features[fea].type === 'changefeature') {
-                    jsMod.push(features[fea].feature);
-                } else if (features[fea].type === 'removefeature') {
-                    idDel.push(features[fea].feature.getId());
-                }
-            }
             const edited = {};
-            if (jsAdd.length) {
-                edited.addfeatures = (new OlFormatGeoJSON({})).writeFeaturesObject(jsAdd);
-            }
-            if (jsMod.length) {
-                edited.changefeature = (new OlFormatGeoJSON({})).writeFeaturesObject(jsMod);
-            }
-            if (idDel.length) {
-                edited.removefeature = idDel;
+            if (features) {
+                for (const fea of Object.keys(features)) {
+                    if (features[fea].type === 'addfeature') {
+                        jsAdd.push(features[fea].feature);
+                    } else if (features[fea].type === 'changefeature') {
+                        jsMod.push(features[fea].feature);
+                    } else if (features[fea].type === 'removefeature') {
+                        idDel.push(features[fea].feature.getId());
+                    }
+                }
+                if (jsAdd.length) {
+                    edited.addfeatures = (new OlFormatGeoJSON({})).writeFeaturesObject(jsAdd);
+                }
+                if (jsMod.length) {
+                    edited.changefeature = (new OlFormatGeoJSON({})).writeFeaturesObject(jsMod);
+                }
+                if (idDel.length) {
+                    edited.removefeature = idDel;
+                }
             }
             return this.saveJSON(edited);
         }
