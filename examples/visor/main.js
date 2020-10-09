@@ -6,6 +6,51 @@ import mapa from './json/capas.js';
 import OlExtControlLayerSwitcher from './external_Modules/layerSwitcher/LayerSwitcher';
 import OlTsMap from '../../src/map/OlTsMap';
 
+import { Control } from 'ol/control';
+
+const CaptureMap = (function(Control) {
+    function CaptureMap(optOptions) {
+        var options = optOptions || {};
+
+        var button = document.createElement('button');
+        button.innerHTML = 'C';
+
+        var element = document.createElement('div');
+        element.className = 'buttonCaptureMap ol-unselectable ol-control';
+        element.appendChild(button);
+
+        Control.call(this, {
+            element: element,
+            target: options.target
+        });
+
+        button.addEventListener('click', this.clickCaptureMap.bind(this), false);
+    }
+
+    /* jshint proto: false */
+    // if (Control) CaptureMap.__proto__ = Control;
+    if (Control) Object.setPrototypeOf(CaptureMap, Control);
+    CaptureMap.prototype = Object.create(Control && Control.prototype);
+    CaptureMap.prototype.constructor = CaptureMap;
+
+    CaptureMap.prototype.clickCaptureMap = function() {
+        var divMP = document.getElementById('divCaptureMap');
+        if (!divMP) {
+            var divCp = document.createElement('div');
+            divCp.id = 'divCaptureMap';
+            document.body.appendChild(divCp);
+            var imgCp = document.createElement('img');
+            imgCp.id = 'imgCaptureMap';
+            divCp.appendChild(imgCp);
+            this.getMap().captureMap({ target: 'imgCaptureMap', size: [400, 300] });
+        } else {
+            divMP.parentNode.removeChild(divMP);
+        }
+    };
+
+    return CaptureMap;
+}(Control));
+
 export default () => {
     mapa.target = 'map';
     const map = new OlTsMap(mapa);
@@ -58,6 +103,7 @@ export default () => {
     */
 
     map.addControl(switcher);
+    map.addControl(new CaptureMap());
     map.activateInteraction('highlight');
     /*
     switcher.on('toggle', function(e) {

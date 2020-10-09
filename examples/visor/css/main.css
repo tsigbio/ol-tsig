@@ -5,3 +5,22 @@ body,
     height: 100%;
     margin: 0;
 }
+
+.buttonCaptureMap {
+    top: 70px;
+    left: .5em;
+}
+
+#divCaptureMap {
+    position: absolute;
+    bottom: 5px;
+    left: .5em;
+    height: 200px;
+    z-index: 1000;
+    background-color:red;
+    padding: 2px;
+}
+
+#divCaptureMap > img {
+    max-height: 100%;
+}

@@ -235,7 +235,7 @@ var mapa = {
             style: {
                 image: {
                     type: 'Circle',
-                    radius: 6,
+                    radius: 12,
                     fill: {
                         color: 'rgba(0, 0, 255, 1)'
                     },
